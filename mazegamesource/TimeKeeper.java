@@ -1,30 +1,24 @@
-public class TimeKeeper
-{
-    public void TimeKeeper(int min, int sec)//a class to keep track of the total seconds and minuntes the player has used to get to a level
-	{ 
-	   if(sec + seconds <=60)
-	    {
-	        minutes+=min;
-	        seconds=sec+seconds;
-    	}
-	   else
-	   {
-	       minutes+=min;
-	       minutes+=1*((sec+seconds)/60);
-	       seconds=(sec+seconds)%60;
+public class TimeKeeper {
+	
+    public void TimeKeeper(int min, int seg) {
+    	if(seg + segundos <=60) {
+    		minutos += min;
+	        segundos = seg + segundos;
+    	} else {
+	       minutos += min;
+	       minutos += 1 * ((seg + segundos) / 60);
+	       segundos = (seg + segundos) % 60;
 	   }
-	}//end TimeKeeper
-	
-	public int getMinutes()
-	{
-	    return minutes;
 	}
 	
-	public int getSeconds()
-	{
-	    return seconds;
+	public int getMinutos() {
+	    return minutos;
 	}
 	
-int minutes=0; 
-int seconds=0;
-}//end class
+	public int getSegundos() {
+	    return segundos;
+	}
+	
+int minutos = 0; 
+int segundos = 0;
+}
