@@ -7,10 +7,11 @@ public class FileLoader{
 	private String[][] GameMatrix;
 	private int column;
 	private int row;
+	private BufferedReader in;
 	
 	public void loadFile(String fileName){  
 		try{
-			BufferedReader in = new BufferedReader(new FileReader(fileName));            
+			in = new BufferedReader(new FileReader(fileName));            
             String x;
             int lineNum=0;
             while (( x = in.readLine()) != null){ 
@@ -115,7 +116,8 @@ public class FileLoader{
      return totalDimonds;
     }
     
-    private class gameFileError extends RuntimeException {//if a level is loaded with ether two players or two exits throw this
+   //Si un nivel es cargado ya sea con dos jugadores o con dos salidas, se genera esta excepcion 
+    private class gameFileError extends RuntimeException {
         
     	public gameFileError(){
     		JFrame frame = new JFrame("Alert");
