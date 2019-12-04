@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
 import javax.swing.*;
 
 public class TheArchitect extends JFrame {
@@ -10,8 +13,7 @@ public class TheArchitect extends JFrame {
        updatedMatrix[WallXCord][WallYCord]="E";  
    }
 
-    public void playerMove(int xScale, int yScale, String[][] currentMatrix,int totalDimonds)throws MovimientoNoValido
-    {
+    public void playerMove(int xScale, int yScale, String[][] currentMatrix,int totalDimonds)throws MovimientoNoValido {
     	int [] playerPos = {0,0};
     	globalTotalDimonds = totalDimonds; 
     	nextLevel(false); 
@@ -33,7 +35,7 @@ public class TheArchitect extends JFrame {
             throw new MovimientoNoValido("Ass Hole hit wall!");
         }
       //Si el jugador recogio todos los diamantes se le muestra la salida
-        if(collected==totalDimonds){ 
+        if(collected == totalDimonds){ 
             showWall();
         }
                
